@@ -1,7 +1,7 @@
 import React from "react";
 
-const BlogList = ({title,data}) => {
- 
+const BlogList = ({title,data,handleDelete}) => {
+
 
   return (
     <div className="blog-list">
@@ -10,6 +10,7 @@ const BlogList = ({title,data}) => {
         <div className="blog-preview" key={item.id}>
           <h2>{item.title}</h2>
           <p>Written by {item.author}</p>
+          <button onClick={()=>handleDelete(item.id) }>Delete</button>
         </div>
       ))}
     </div>
