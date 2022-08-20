@@ -1,7 +1,10 @@
 import React from "react";
 
-const BlogList = ({title,data,handleDelete}) => {
+const BlogList = ({title,data}) => {
 
+  const handleDelete = (id)=>{
+    
+  }
 
   return (
     <div className="blog-list">
