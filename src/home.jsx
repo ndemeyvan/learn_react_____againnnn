@@ -15,9 +15,11 @@ const Home = () => {
   };
 
   // Cette function est lance a chaque fois que le composant est rendu / ou a chaque changement d'etat
+  // le [] fait en sorte que le useEffect se comporte comme un InitState en flutter
+  // Si un element est passe dans []=>[name] , useEffect est appele uniquement quand name est mis a jour uniquement
   useEffect(()=>{
     console.log('Use effect run');
-  })
+  },[])
 
   return (
     <div className="home">
