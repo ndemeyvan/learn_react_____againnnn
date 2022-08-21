@@ -9,23 +9,25 @@ const useGetFecth = (url) => {
     useEffect(() => {
         // Fetch Data from json server
         // Endpoint : "http://localhost:8000/blogs"
-        fetch(url)
-            .then((res) => {
-                if (!res.ok) {
-                    throw Error('Request Failed , please try again ...')
-                }
-                return res.json();
-            })
-            .then((data) => {
-                console.log("This is data response : " + data);
-                setData(data);
-                setIsLoading(false);
-                setError(null);
-            }).catch((e) => {
-                console.log('This is request error ', e.message);
-                setError(e.message);
-                setIsLoading(false);
-            });
+        setTimeout(function () {
+            fetch(url)
+                .then((res) => {
+                    if (!res.ok) {
+                        throw Error('Request Failed , please try again ...')
+                    }
+                    return res.json();
+                })
+                .then((data) => {
+                    console.log("This is data response : " + data);
+                    setData(data);
+                    setIsLoading(false);
+                    setError(null);
+                }).catch((e) => {
+                    console.log('This is request error ', e.message);
+                    setError(e.message);
+                    setIsLoading(false);
+                });}, 1000); 
+
         console.log("Use effect run");
     }, []);
 

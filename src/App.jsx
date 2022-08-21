@@ -3,6 +3,7 @@ import Home from "./home";
 import NavBar from "./navBar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CreateBlog from "./create";
+import BlogDetail from "./BlogDetail";
 
 class App extends Component {
   render() {
@@ -17,6 +18,8 @@ class App extends Component {
               </Route>
               <Route path="/create">
                 <CreateBlog />
+              </Route><Route path="/blogs/:id">
+                <BlogDetail />
               </Route>
             </Switch>
           </div>

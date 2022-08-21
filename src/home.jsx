@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import BlogList from "./blogList";
 import useGetFecth from "./useGetFecth";
 
