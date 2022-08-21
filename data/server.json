@@ -53,6 +53,12 @@
       "body": "My First body",
       "author": "Mario",
       "id": 9
+    },
+    {
+      "title": "My First title",
+      "body": "My First body",
+      "author": "Mario",
+      "id": 10
     }
   ]
 }

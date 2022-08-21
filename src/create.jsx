@@ -5,7 +5,8 @@ const CreateBlog = () => {
   const [title, setTitle] = useState("My First title");
   const [body, setBody] = useState("My First body");
   const [author, setAuthor] = useState("Mario");
-//   
+  //   Manual redirection
+  const history = useHistory();
   //   request Data
   const [isLoading, setIsLoading] = useState(false);
 
@@ -34,6 +35,7 @@ const CreateBlog = () => {
         .then((data) => {
           console.log("new Blog add " + data);
           setIsLoading(false);
+          history.push('/');
         })
         .catch((e) => {
           console.log("This is request error ", e.message);
